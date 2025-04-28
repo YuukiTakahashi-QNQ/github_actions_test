@@ -7,9 +7,7 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
-    env:
-      GREETING: "Hello Universal!"
 
     steps:
       - name: Print Hello World From Env
-        run: echo "${{env.GREETING}}"
+        run: echo "${{secrets.MY_SECRET}}"
