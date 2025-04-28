@@ -19,4 +19,4 @@ jobs:
           python-version: '3.9'
 
       - name: Run Python scripts
-        run: python hello_world.py
+        run: python Scripts/hello_world.py
