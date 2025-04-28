@@ -2,21 +2,13 @@ name: Hello World
 
 on:
   push:
-    paths:
-      - 'Scripts/**'
-      - 'README.md'
+    branches: [ "main" ]
 
 jobs:
   hello:
     runs-on: ubuntu-latest
+    env: "Hello Universal!"
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Run Python scripts
-        run: python Scripts/hello_world.py
+      - name: Print Hello World From Env
+        uses: echo "${{env.GREETING}}"
