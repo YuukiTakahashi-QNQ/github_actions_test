@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Print Hello World From Env
-        uses: echo "${{env.GREETING}}"
+        run: echo "${{env.GREETING}}"
