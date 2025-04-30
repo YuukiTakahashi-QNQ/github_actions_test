@@ -2,6 +2,11 @@ name: Hello World
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: '名前を入力してください'
+        required: true
+        default: 'World'
 
 jobs:
   hello:
