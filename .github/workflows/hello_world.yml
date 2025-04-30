@@ -1,17 +1,12 @@
-name: Test Hello World
+# .github/workflows/test_hello_world.yml
+name: TEST Hello World
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: '名前を入力してください'
-        required: true
-        default: 'World'
 
 jobs:
-  hello:
+  say_hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Print Hello World From Env
-        run: echo "${{secrets.MY_SECRET}}"
+      - name: Say Hello
+        run: echo "Hello from manual GitHub Action!"
